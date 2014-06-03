@@ -35,16 +35,7 @@ function addEmbed(embed) {
     var l = getLocation(embed);
     console.log(embed);
     embed = l.pathname;
-    embed = "<object type='application/x-shockwave-flash' height='450' width='800' id='live_embed_player_flash' data='http://www.twitch.tv/widgets/live_embed_player.swf?channel=" + embed + "' bgcolor='#000000'><param name='allowFullScreen' value='true' /><param name='allowScriptAccess' value='always' /><param name='allowNetworking' value='all' /><param name='movie' value='http://www.twitch.tv/widgets/live_embed_player.swf' /><param name='flashvars' value='hostname=www.twitch.tv&channel=" + embed + "&auto_play=true&start_volume=25' /></object>"
-    /*GM_xmlhttpRequest({
-        method: "GET",
-        url: embed,   
-        onload: function(response){
-            parser = new DOMParser();
-            twitch = parser.parseFromString(response.responseText, "text/html");
-            twitch.
-        }
-    });*/
+    embed = "<object type='application/x-shockwave-flash' height='450' width='800' id='live_embed_player_flash' data='http://www.twitch.tv/widgets/live_embed_player.swf?channel=" + embed + "' bgcolor='#000000'><param name='allowFullScreen' value='true' /><param name='allowScriptAccess' value='always' /><param name='allowNetworking' value='all' /><param name='movie' value='http://www.twitch.tv/widgets/live_embed_player.swf' /><param name='flashvars' value='hostname=www.twitch.tv&channel=" + embed + "&auto_play=true&start_volume=25' /></object>";
     removeSidebar();
     var newDiv = document.createElement('div');
     newDiv.id = 'twitchEmbedd';
@@ -56,10 +47,13 @@ function addButton() {
     var div = document.createElement('div');
     div.id = 'inputButton';
     div.className = 'account-info';
+    div.style.margin = '10px 0px 0px';
     div.innerHTML="<span id='btnAddVideo'>Add Video Stream</span>";
-    console.log(bar.childNode[1]);
-    bar.appendChild(div);
-    document.getElementById('btnAddVideo').className = "button";
+    bar.childNodes[3].appendChild(div);
+    var s = document.getElementById('btnAddVideo');
+    s.style.cursor='pointer'; s.style.color='#09F';
+    s.style.fontWeight='bold'; s.style.border = '2px solid #09F';
+    s.style.padding = '6px 14px';
     document.getElementById('btnAddVideo').addEventListener("click", showInputBox, false);
 }
 addButton();
