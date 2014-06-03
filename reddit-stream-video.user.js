@@ -57,6 +57,7 @@ function addButton() {
     div.id = 'inputButton';
     div.className = 'account-info';
     div.innerHTML="<span id='btnAddVideo'>Add Video Stream</span>";
+    console.log(bar.childNode[1]);
     bar.appendChild(div);
     document.getElementById('btnAddVideo').className = "button";
     document.getElementById('btnAddVideo').addEventListener("click", showInputBox, false);
