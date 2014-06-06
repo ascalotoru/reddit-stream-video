@@ -34,9 +34,8 @@ function getObjectHeigth(objW){
 }
 function addEmbed(embed) {
     var l = getLocation(embed);
-    if(l.hostname != "www.twitch.tv" || l.hostname != 'twitch.tv'){
-        alert("Please type a valid twitch.tv link.");
-    }else{
+    console.log("Hostname: " + l.hostname);
+    if(l.hostname.localeCompare("www.twitch.tv") == 0 || l.hostname.localeCompare('twitch.tv') == 0){
         var main = document.getElementById('c-main');
         var sidebar = document.getElementById('sidebar');
         main.style.width="36%";
@@ -51,6 +50,8 @@ function addEmbed(embed) {
         newDiv.id = 'twitchEmbedd';
         newDiv.innerHTML=embed;
         document.getElementById('sidebar').appendChild(newDiv);
+    }else{
+        alert("Please type a valid twitch.tv link.");
     }
 }
 function addButton() {
