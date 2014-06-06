@@ -34,7 +34,6 @@ function getObjectHeigth(objW){
 }
 function addEmbed(embed) {
     var l = getLocation(embed);
-    console.log("Hostname: " + l.hostname);
     if(l.hostname.localeCompare("www.twitch.tv") == 0 || l.hostname.localeCompare('twitch.tv') == 0){
         var main = document.getElementById('c-main');
         var sidebar = document.getElementById('sidebar');
@@ -42,7 +41,6 @@ function addEmbed(embed) {
         main.style.margin="0px 0px 0px 30px";
         sidebar.style.width="60%";
         sidebar.style.left="40%";
-        console.log(embed);
         embed = l.pathname;
         embed = "<object type='application/x-shockwave-flash' width='"+getObjectWidth()+"' height='"+getObjectHeigth(getObjectWidth())+"' id='live_embed_player_flash' data='http://www.twitch.tv/widgets/live_embed_player.swf?channel=" + embed + "' bgcolor='#000000'><param name='allowFullScreen' value='true' /><param name='allowScriptAccess' value='always' /><param name='allowNetworking' value='all' /><param name='movie' value='http://www.twitch.tv/widgets/live_embed_player.swf' /><param name='flashvars' value='hostname=www.twitch.tv&channel=" + embed + "&auto_play=true&start_volume=25' /></object>";
         removeSidebar();
