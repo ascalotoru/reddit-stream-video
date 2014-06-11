@@ -1,6 +1,6 @@
 Reddit Stream Video
 ===================
-Adds the ability to add video to reddit-stream.com
+Adds the ability to add twitch stream to reddit-stream.com
 
 Requisites
 ----------
