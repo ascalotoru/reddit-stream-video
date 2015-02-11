@@ -1,6 +1,6 @@
 Reddit Stream Video
 ===================
-Adds the ability to add twitch stream to reddit-stream.com
+Small greasemonkey scripts that allows to add videos to reddit-stream
 
 Requisites
 ----------
@@ -9,8 +9,8 @@ If you are using Google Chrome you don't need anything.
 
 Installing on Firefox
 ---------------------
-The simplest way to install the script is opening in raw format from GitHub and when the browsers asks click install.
+The simplest way to install the script is opening in raw format from GitHub and when the browser asks click install.
 
 Installing on Chrome
 --------------------
-Download the script an drag to the extension tab.
+Download the script and drag to the extension tab.
