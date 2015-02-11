@@ -1,6 +1,6 @@
 Reddit Stream Video
 ===================
-Small greasemonkey scripts that allows to add videos to reddit-stream
+Small greasemonkey scripts that allows to add Youtube and Twitch streams to reddit-stream
 
 Requisites
 ----------
